@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org" th:replace="~{base :: layout(~{::title}, ~{::section})}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<section>
+
+
+
+<div class="container">
+			<div class="row">
+				<div class="col-md-8 offset-md-2 mt-4">
+					<div class="card">
+						<div class="card-header text-center fs-4">Subjects Details</div>
+					</div>
+					<div class="card-body">
+
+						<table class="table">
+							<thead>
+								<tr >
+									<th scope="col">Id</th>
+									<th scope="col">First-Subject</th>
+									<th scope="col">Second-Subject</th>
+									<th scope="col">Third-Subject</th>
+									<th scope="col">Fourth-Subject</th>
+									
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="e:${subject}">
+									<td scope="row">[[${e.sId}]]</td>
+									<td>[[${e.subjectFirst}]]</td>
+									<td>[[${e.subjectSecond}]]</td>
+									<td>[[${e.subjectThird}]]</td>
+									<td>[[${e.subjectFourth}]]</td>
+					
+								</tr>
+								
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+</section>
+
+</body>
+</html>
